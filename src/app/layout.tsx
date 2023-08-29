@@ -1,8 +1,9 @@
+import Header from '@/components/Header'
 import '@/globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google' // 字型
+import { Black_Ops_One } from 'next/font/google' // 字型
 
-const inter = Inter({ subsets: ['latin'] })
+const blackOpsOne = Black_Ops_One({weight:['400'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'React Next Demo',
@@ -16,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <div>Header</div>
-        {children}</body>
+      <body className={blackOpsOne.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { Black_Ops_One } from 'next/font/google' // 字型
+import { Inter } from 'next/font/google' // 字型
 
-const blackOpsOne = Black_Ops_One({weight:['400'], subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Post',
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className={blackOpsOne.className}>
+    <div className={inter.className}>
       {children}
     </div>
   )
