@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function Demo() {
   const navs = [
@@ -15,6 +15,5 @@ export default function Demo() {
         </li>
       ))}
     </>
-    
   )
 }

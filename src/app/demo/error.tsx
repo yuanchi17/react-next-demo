@@ -3,13 +3,7 @@
 import Link from 'next/link'
 import { useEffect } from 'react'
 
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string }
-  reset: () => void
-}) {
+export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {
     console.error(error)
   }, [error])
@@ -25,7 +19,7 @@ export default function Error({
       >
         retry
       </button>
-      <Link href="/demo">Go Demo Page</Link>
+      <Link href='/demo'>Go Demo Page</Link>
     </>
   )
 }

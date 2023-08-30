@@ -24,8 +24,11 @@ export default function Header() {
         return (
           <>
             {!id ? <></> : <span>｜</span>}
-            <Link href={nav.href} key={id} style={{ color: isActive ? 'blue' : ''}}>{nav.title}</Link>
-          </>)
+            <Link href={nav.href} key={id} style={{ color: isActive ? 'blue' : '' }}>
+              {nav.title}
+            </Link>
+          </>
+        )
       })}
     </div>
   )
