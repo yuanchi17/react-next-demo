@@ -13,6 +13,7 @@ export default function Header() {
     { title: 'Home', href: '/' },
     { title: 'Post', href: '/post' },
     { title: 'Demo', href: '/demo' },
+    { title: 'Member', href: '/member' },
   ]
 
   return (
@@ -23,12 +24,12 @@ export default function Header() {
         else isActive = pathname.startsWith(nav.href)
 
         return (
-          <>
+          <span key={nav.href}>
             {!id ? <></> : <span>｜</span>}
-            <Link href={nav.href} key={id} style={{ color: isActive ? 'blue' : '' }}>
+            <Link href={nav.href} style={{ color: isActive ? 'blue' : '' }}>
               {nav.title}
             </Link>
-          </>
+          </span>
         )
       })}
     </div>
