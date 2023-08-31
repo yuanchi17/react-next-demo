@@ -15,9 +15,9 @@ export default async function Posts() {
   useEffect(() => {
     const getPost = async () => {
       const userId = window.localStorage.getItem('demo-userId')
-      const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
+      const res = await fetch(`http://localhost:3000/api/posts/${userId}`)
 
-      const datas = (await res.json()) as postTs[]
+      const datas = await res.json()
       console.log(datas)
       if (!datas.length) throw new Error(`此 userId: ${userId} 沒有相關的 posts`)
 
